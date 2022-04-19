@@ -75,8 +75,6 @@ function onGetResponseModal(response){
 
     closeModalForm();
     console.log(containt);
-
-
 }
 
 //affichage du formulaire pour ajouter un risque au sprint
