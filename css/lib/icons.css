@@ -1,0 +1,47 @@
+.icon-container{
+    padding: 10px;
+    float: left;
+}
+
+[class*="eicon-"]{
+    display: block;
+}
+
+a.eicon:hover span{
+    color: #6302BC;
+}
+
+a.eicon svg{
+    fill: #C0A6D8;
+}
+
+a.eicon svg:hover{
+    fill: #6302BC;
+}
+
+.btn-notification svg, .btn-book svg, .btn-prev-Product svg{
+    fill: #3D0075;
+    transition: .2s;
+}
+
+.btn-notification:hover svg, .btn-book:hover svg, .btn-prev-Product:hover svg{
+    fill: #6302BC;
+}
+
+.select svg{
+    fill: #3D0075;
+    transform: .2;
+}
+
+.profil-user:hover svg{
+    fill: #6302BC;
+}
+
+.icon-group{
+    display: flex;
+    align-items: center;
+}
+
+.flex-direction-icon .icon-container svg.active{
+    fill: #3D0075;
+}

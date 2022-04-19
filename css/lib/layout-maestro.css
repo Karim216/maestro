@@ -1,0 +1,153 @@
+/* ***************************************************************************************
+	STYLES GÉNÉRAUX
+******************************************************************************************* */
+@font-face {
+    font-family: "poppins";
+    src: url(/fonts/poppins/Poppins-Medium.ttf) format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+	font-size : 62.5%;
+}
+
+body{
+    font-family: "poppins";
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #C0A6D8;
+    transition: .2s;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+    color: #3D0075;
+}
+
+hr{
+    height: 2px;
+    border: none;
+    background-color: #D8CCE3;
+    margin-bottom: 10px;
+    width: 30px;
+
+}
+
+input, textarea{
+    border: none;
+    display: block;
+    outline: none;
+    color: #3D0075;
+    width: 85px;
+    background-color: rgba(255, 255, 128, 0);
+}
+
+textarea{
+    height: 48px;
+}
+
+main .search-box{
+    background-color: rgba(99, 2, 188, 0.10);
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(99, 2, 188, 0.25);
+    padding: 2px;
+    border-radius: 20px;
+}
+
+.search-btn{
+    margin: 4px 9px 0 9px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1{
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0 7px;
+}
+
+h2{
+    margin: 0 0 5px 0;
+    font-size: 1.7rem;
+}
+
+p{
+    margin: 0;
+}
+
+span{
+    color: #BFA9D3;
+}
+
+strong{
+    color: #3D0075;
+}
+
+mark{
+    border-radius: 20px;
+    padding: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}
+
+main{
+    display: flex;
+}
+
+main section{
+    padding: 1%;
+    box-shadow : 0rem 0.5rem 1.5rem 0.5rem rgba(0,0,0,0.10);
+    border-radius: 10px;
+}
+
+.row-center{
+    display: flex;
+    align-items: center;
+}
+
+.colum-center{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    border: 1px solid #6303BC;
+    background-color: white;
+    padding: 10px 22px;
+    border-radius: 20px;
+    color: #6303BC;
+    cursor: pointer;
+}
+
+.draggable{
+    cursor: move;
+}
+
+.draggable.dragging{
+    opacity: .4;
+}
