@@ -32,7 +32,7 @@ aside{
 }
 
 aside .icon-container{
-    padding: 23%;
+    padding: 23% 0;
 }
 /* ***************************************************************************************
 	HEADER
@@ -41,7 +41,10 @@ aside .icon-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 30%;
+}
+
+.topbar .btn:not(:last-child){
+    margin-left: 18px;
 }
 
 .topbar > div:hover{
@@ -88,6 +91,13 @@ aside .icon-container{
 .profil-user{
     display: flex;
     align-items: center;
+    margin-left: 35px;
+    width: 198px;
+}
+
+.profil-user:hover .select svg{
+    transform: rotate(180deg);
+    transition: .03s;
 }
 
 .btn-select-user-option{
@@ -111,13 +121,13 @@ aside .icon-container{
     transition: .2s;
     padding: 13px 0;
     transition: .2s;
-    font-weight: bold;
+    text-align: center;
 }
 
 .list-second-nav.list-menu .active{
     color: #3D0075;
     cursor: pointer;
-    border-bottom: 3px solid #3D0075;
+    border-bottom: 2px solid #3D0075;
 }
 
 .list-page-nav li:not(:first-child){
@@ -127,11 +137,10 @@ aside .icon-container{
 .list-page-nav li:hover, .list-menu li:hover{
     color: #3D0075;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .list-menu li:hover{
-    border-bottom: 3px solid #3D0075;
+    border-bottom: 2px solid #3D0075;
 }
 
 .list-second-nav li:not(:first-child){
@@ -143,7 +152,7 @@ aside .icon-container{
 /*////////////////////
 	PRODUCT BACKLOG
 ////////////////////// */
-main.container{
+div.container{
     padding: 2.5%;
 }
 section.product-backlog-container{
@@ -160,6 +169,7 @@ section.product-backlog-container{
 .main-header-container > div, .section-title > div{
     display: flex;
     align-items: center;
+    /* flex-wrap: wrap; */
 }
 
 .product-main ul li{
@@ -179,11 +189,11 @@ section.product-backlog-container{
 }
 
 .section-search-product > div:not(:first-child){
-    margin-left: 25px;
+    margin-left: 17px;
 
 }
 
-main ul > p{
+div.container ul > p{
     color: rgba(61, 0, 117, 0.6);
 }
 
@@ -217,9 +227,9 @@ mark.moyenne{
     margin-right: 10px;
 }
 
-.product-main ul > p{
+.product-main > div > p{
     margin: 0 0 7px 4%;
-
+    color: rgba(61, 0, 117, 0.6);
 }
 
 p.date-sprint{
@@ -227,7 +237,7 @@ p.date-sprint{
     color: #6303BC;
 }
 
-main ul li > p{
+div.container ul li > p{
     margin: 15px 0 7px 0;
 }
 
@@ -250,7 +260,7 @@ main ul li > p{
 }
 
 .sprint-planning-container{
-    width: 74%;
+    width: 75%;
     padding-right: 0;
     padding-left: 0;
 }
@@ -258,7 +268,6 @@ main ul li > p{
 .sprint-planning-date-edit{
     display: flex;
     align-items: center;
-    width: 42%;
     justify-content: space-between;
 }
 
@@ -308,7 +317,6 @@ main ul li > p{
 
 .select-sprint > div label{
     color: #3D0075;
-    font-weight: bold;
 }
 
 .menu-sprint li a{
@@ -388,17 +396,17 @@ div.trie-sprint div.select-trie label{
 }
 
 .sprint-planning-date-edit ul li:not(:first-child){
-    left: -10px;
+    left: -11px;
     position: relative;
 }
 
 .sprint-planning-date-edit ul li:nth-child(3){
-    left: -20px;
+    left: -22px;
     position: relative;
 }
 
 .sprint-planning-date-edit ul li:last-child{
-    left: -31px;
+    left: -33px;
     top: -2px;
     position: relative;
     padding: 4%;
@@ -412,9 +420,7 @@ div.trie-sprint div.select-trie label{
 .sprint-backlog{
     background-color: rgba(99, 3, 188, 0.03);
     padding: 2% 1% 0 1%;
-    width: 37%;
-    display: inline-block;
-    vertical-align: top;
+    width: 36%;
 }
 
 .main-sprint-container{
@@ -429,7 +435,7 @@ div.sprint-main ul li{
     border: none;
     background-color: #ffffff;
     border-radius: 5px;
-    box-shadow : 0rem 0.5rem 1.5rem 0.5rem rgba(0,0,0,0.10);
+    box-shadow : 0rem 0.1rem 0.7rem 0.1rem rgba(0,0,0,0.10);
 }
 
 .sprint-main{
@@ -464,29 +470,35 @@ div.sprint-main ul li{
   /*************************/
   .main-sprint-iteration{
       margin-left: 13.5px;
-      width: 61%;
-      vertical-align: top;
-      display: inline-block;
-      overflow-x: auto;
+      width: 64%;
 }
 
-.main-sprint-iteration::-webkit-scrollbar {
+.main-sprint-iteration > div{
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sprint-iteration{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main-sprint-iteration > div::-webkit-scrollbar {
 	width: 10px;
   }
   
   /* Track */
-.main-sprint-iteration::-webkit-scrollbar-track {
+  .main-sprint-iteration > div::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 5px rgba(99, 3, 188, 0.3); 
   }
    
   /* Handle */
-.main-sprint-iteration::-webkit-scrollbar-thumb {
+  .main-sprint-iteration > div::-webkit-scrollbar-thumb {
 	background: rgba(99, 3, 188, 0.08); 
 }
 
-.sprint-iteration{
-    width: 80%;
-}
+
 
 .sprint-iteration .main-header-container{
     padding: 0;
@@ -544,23 +556,12 @@ table tr th:first-child, table tfoot td{
     border-bottom: 1px solid #6303BC;
 }
 
-td, th:first-child{
+.sprint-iteration table td, .sprint-iteration th:first-child{
     padding: 2% 3%;
 }
 
 table .story-container{
     margin-bottom: 2%;
-}
-
-.main-sprint-iteration > div{
-    width: 200%;
-    white-space: nowrap;
-}
-
-.sprint-iteration{
-    width: 37%;
-    display: inline-block;
-    vertical-align: top;
 }
 
 .sprint-iteration:not(:first-child){
@@ -572,7 +573,7 @@ table .story-container{
 ////////////////////// */
 .modal-add-new-sprint{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -585,14 +586,14 @@ table .story-container{
 
 .add-sprint-container{
     background-color: #ffffff;
-    width: 900px;
+    width: 850px;
     border-radius: 10px;
 }
 
 .header-modal{
     text-align: center;
     border-bottom: 1px solid #E5E5E5;
-    padding: 3% 0 2% 0;
+    padding: 2% 0;
 }
 
 .header-modal p{
@@ -602,13 +603,13 @@ table .story-container{
 .header-modal svg{
     float: right;
     position: relative;
-    top: -40px;
-    right: 30px;
+    top: -34px;
+    right: 19px;
     cursor: pointer;
 }
 
 .main-modal{
-    padding: 3% 6%;
+    padding: 2% 4%;
 }
 
 .info-modal-container{
@@ -627,14 +628,14 @@ table .story-container{
     padding-left: 5%;
 }
 
-.info-modal-container > div:first-child div:last-child{
+.info-modal-container > div:first-child > div:last-child{
     background-color: rgba(99, 3, 188, 0.05);
     padding: 2% 4%;
     margin-bottom: 10px;
 }
 
-.main-modal input{
-    height: 30px;
+.main-modal input, p.sprint-input, p.date-select{
+    height: 26px;
 }
 
 .main-modal .info-modal-container span{
@@ -652,16 +653,56 @@ table .story-container{
     width: 100%;
     display: block;
     margin-top: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     padding: 7px;
 }
 
+p.sprint-input, p.date-select{
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    color: #6303BC;
+    margin-top: 3px;
+    margin-bottom: 18px;
+    margin-top: 3px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+p.sprint-input{
+    border-left: 1px solid #E5E5E5;
+    padding: 4px;
+    width: 14%;
+}
+
+p.date-select{
+    border-right: 1px solid #E5E5E5;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 100%;
+    padding-top: 5px;
+
+}
+
 input#velocite{
-    width: 50%;
+    width: 45%;
+}
+
+input#duree{
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 .main-modal .btn-add-risque{
     display: inline-block;
+}
+
+.btn-add-risque .eicon svg, .risque-cheklist svg{
+    margin-right: 8px;
+}
+
+.risque-cheklist{
+    margin-bottom: 10px;
 }
 
 .sprint-modal-add-risque{
@@ -684,10 +725,21 @@ input#velocite{
 
 .main-modal table{
     margin-top: 3px;
+    border-spacing: 7px;
+}
+
+.main-modal table th, .main-modal table td{
+    padding: 7px;
 }
 
 .main-modal table thead tr{
     background-color: rgba(99, 3, 188, 0.05);
+}
+
+.main-modal table th{
+    border-left-style: none;
+    border-right-style: none;
+    text-align: left;
 }
 
 .main-modal table td{
@@ -699,6 +751,18 @@ input#velocite{
     border: none;
 }
 
-.main-modal td, .main-modal th:first-child{
-    padding: 0.8% 1%;
+.main-modal .form-add-rique select{
+    width: 90%;
+    height: 30px;
+    outline: none;
+    border: 1px solid #E5E5E5;
+}
+
+#containt-btn-risque{
+    text-align: right;
+}
+
+#containt-btn-risque button:last-child{
+    border: none;
+    background-color: rgba(15, 189, 230, 0.2);
 }

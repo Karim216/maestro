@@ -30,7 +30,6 @@ a.eicon svg:hover{
 
 .select svg{
     fill: #3D0075;
-    transform: .2;
 }
 
 .profil-user:hover svg{
@@ -40,6 +39,9 @@ a.eicon svg:hover{
 .icon-group{
     display: flex;
     align-items: center;
+    width: 100%;
+    text-align: right;
+    justify-content: flex-end;
 }
 
 .flex-direction-icon .icon-container svg.active{

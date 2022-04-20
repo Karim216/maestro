@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/lib/layout-maestro.css">
     <link rel="stylesheet" href="css/maestro.css">
     <link rel="stylesheet" href="css/lib/icons.css">
@@ -168,6 +170,9 @@
                                 <img src="img/input/search.svg" alt="logo maestro projet">
                             </a>
                             <input type="text" class="search-txt" name="global-search" id="global-search" placeholder="Rechercher">
+                            <a class="close-search-btn" href="#">
+                                <img src="img/input/close.svg" alt="Fermer la recherche">
+                            </a>
                         </div>
                         <div class="topbar">
                             <div class="btn btn-quick-creation">
@@ -195,7 +200,7 @@
                                 </div>
                             </div>
                             <div class="profil-user">
-                                <div class="img-user">
+                                <div class="img-user row-center">
                                     <img src="img/avatar/user1.jpg" alt="photo de profil">
                                 </div>
                                 <div class="btn btn-select-user-option">
@@ -242,7 +247,7 @@
                     </div>
                 </nav>
             </header>
-            <main class="container">
+            <div class="container">
                 <section class="product-backlog-container">
                     <div class="main-header-container product-header-container">
                         <div>
@@ -259,13 +264,16 @@
                             </div>
                         </div>
                         <div class="section-search-product">
-                            <div class="search-box">
+                            <div class="search-box row-center" id="search-box-1">
                                 <a class="search-btn" href="#">
-                                    <img src="img/input/search.svg" alt="logo maestro projet">
+                                    <img src="img/input/search.svg" alt="Rechercher element">
                                 </a>
                                 <input type="text" class="search-txt main-section-search" name="global-search" placeholder="Rechercher">
+                                <a class="close-search-btn" href="#">
+                                    <img src="img/input/close.svg" alt="Fermer la recherche">
+                                </a>
                             </div>
-                            <div>
+                            <div class="trie-btn row-center">
                                 <svg width="18" height="4" viewBox="0 0 18 4">
                                     <path fill-rule="evenodd" d="M2 3.99998C0.89543 3.99998 0 3.10455 0 1.99998C0 0.895408 0.89543 -2.28882e-05 2 -2.28882e-05C3.10457 -2.28882e-05 4 0.895408 4 1.99998C4 3.10455 3.10457 3.99998 2 3.99998ZM9 3.99998C7.89543 3.99998 7 3.10455 7 1.99998C7 0.895408 7.89543 -2.28882e-05 9 -2.28882e-05C10.1046 -2.28882e-05 11 0.895408 11 1.99998C11 3.10455 10.1046 3.99998 9 3.99998ZM14 1.99998C14 3.10455 14.8954 3.99998 16 3.99998C17.1046 3.99998 18 3.10455 18 1.99998C18 0.895408 17.1046 -2.28882e-05 16 -2.28882e-05C14.8954 -2.28882e-05 14 0.895408 14 1.99998Z" fill="#3D0075"/>
                                 </svg>
@@ -274,8 +282,8 @@
                     </div>
                     <div class="product-main">
                         <div>
+                            <p>Récent</p>
                             <ul class="recent">
-                                <p>Récent</p>
                                 <li>
                                     <div class="story-container">
                                         <div class="story-point">
@@ -377,8 +385,8 @@
                                     </div>
                                 </li>
                             </ul>
+                            <p>Il y'a une semaine</p>
                             <ul class="une-semaine">
-                                <p>Il y'a une semaine</p>
                                 <li>
                                     <div class="story-container">
                                         <div class="story-point">
@@ -472,6 +480,9 @@
                                     <img src="img/input/search.svg" alt="logo maestro projet">
                                 </a>
                                 <input type="text" class="search-txt main-section-search" name="global-search" placeholder="Rechercher">
+                                <a class="close-search-btn" href="#">
+                                    <img src="img/input/close.svg" alt="Fermer la recherche">
+                                </a>
                             </div>
                             <div class="trie-sprint">
                                 <label>Périmètre</label>
@@ -506,14 +517,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="trie-btn row-center">
                                 <svg width="18" height="4" viewBox="0 0 18 4">
                                     <path fill-rule="evenodd" d="M2 3.99998C0.89543 3.99998 0 3.10455 0 1.99998C0 0.895408 0.89543 -2.28882e-05 2 -2.28882e-05C3.10457 -2.28882e-05 4 0.895408 4 1.99998C4 3.10455 3.10457 3.99998 2 3.99998ZM9 3.99998C7.89543 3.99998 7 3.10455 7 1.99998C7 0.895408 7.89543 -2.28882e-05 9 -2.28882e-05C10.1046 -2.28882e-05 11 0.895408 11 1.99998C11 3.10455 10.1046 3.99998 9 3.99998ZM14 1.99998C14 3.10455 14.8954 3.99998 16 3.99998C17.1046 3.99998 18 3.10455 18 1.99998C18 0.895408 17.1046 -2.28882e-05 16 -2.28882e-05C14.8954 -2.28882e-05 14 0.895408 14 1.99998Z" fill="#3D0075"/>
                                 </svg>
                             </div>
                         </div>
                     </div>
-                    <div class="main-sprint-container">
+                    <div class="main-sprint-container row-center">
                         <div class="sprint-backlog">
                             <div class="main-header-container">
                                 <div class="section-title product-title">
@@ -712,13 +723,13 @@
                                             <div class="section-title product-title">
                                                 <div>
                                                     <div>
-                                                        <h2>Sprint 1 : 1ère itération<svg width="16" height="9" viewBox="0 0 16 9">
+                                                        <h2><span class="color dark span-sprint-iteration">Sprint 1 : 1ère itération</span><svg width="16" height="9" viewBox="0 0 16 9">
                                                             <path fill-rule="evenodd" d="M14.0775 0.0774231L15.256 1.25593L8.00006 8.51186L0.744141 1.25593L1.92265 0.0774231L8.00006 6.15483L14.0775 0.0774231Z" fill="#3D0075"/>
                                                         </svg></h2>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p>Du 7 jan. 2021 au 20 janv. 2021 (2 semaines)</p>
+                                            <p><span class="color dark span-duree-sprint">Du 7 jan. 2021 au 20 janv. 2021 (2 semaines)</span></p>
                                             <p class="user-storie product-user-storie">4 user stories</p>
                                         </div>
                                         <div class="main-header-container">
@@ -741,7 +752,7 @@
                                                         <svg width="20" height="20" viewBox="0 0 20 20">
                                                             <g>
                                                             <path id="icon" fill-rule="evenodd" d="M4.99996 5H6.66663V4.16667H13.3333V5H15V4.16667H16.6666V6.66667H3.33329V4.16667H4.99996V5ZM3.33329 8.33333V16.6667H9.16663V18.3333H3.33329C2.41282 18.3333 1.66663 17.5871 1.66663 16.6667V4.16667C1.66663 3.24619 2.41282 2.5 3.33329 2.5H4.99996V1.66667H6.66663V2.5H13.3333V1.66667H15V2.5H16.6666C17.5871 2.5 18.3333 3.24619 18.3333 4.16667V9.16667H16.6666V8.33333H3.33329Z"/>
-                                                            <g id="24 / time / time">
+                                                            <g>
                                                             <path id="icon_2" fill-rule="evenodd" d="M15.0001 19.5833C12.4688 19.5833 10.4167 17.5313 10.4167 15C10.4167 12.4687 12.4688 10.4167 15.0001 10.4167C17.5314 10.4167 19.5834 12.4687 19.5834 15C19.5834 17.5313 17.5314 19.5833 15.0001 19.5833ZM15.0001 18.3333C16.841 18.3333 18.3334 16.841 18.3334 15C18.3334 13.1591 16.841 11.6667 15.0001 11.6667C13.1591 11.6667 11.6667 13.1591 11.6667 15C11.6667 16.841 13.1591 18.3333 15.0001 18.3333ZM16.6667 14.8958H15.1042V13.3333H13.9997V15.9998H16.6667V14.8958Z"/>
                                                             </g>
                                                             </g>
@@ -761,8 +772,8 @@
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th colspan="2">User story & Tâches <span>Vélocité moyenne : <span class="nbr-velocite">8</span></span></th>
-                                                <th>Détail</th>
+                                                <th colspan="2">User story & Tâches <span>Vélocité moyenne : </span><span class="nbr-velocite">8</span></th>
+                                                <th>Délais</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -931,7 +942,7 @@
                         </div>
                     </div>
                 </section>
-            </main>
+            </div>
         </section>
     </div>
     <div class="modal-add-new-sprint" id="modal-new-sprint">
@@ -948,15 +959,20 @@
                     <div>
                         <div>
                             <label for="libelle" class="modal-form-label">Libellé court du sprint<span>*</span></label>
-                            <input id="libelle" class="input-form" type="text" name="libelle">
+                            <div class="row-center">
+                                <p class="sprint-element-number sprint-input"></p>
+                                <input id="libelle" class="input-form" type="text" name="libelle">
+                            </div>
                         </div>
                         <div>
                             <label for="description" class="modal-form-label">Description</label>
                             <textarea id="description" class="input-form" name="description" cols="30" rows="10"></textarea>
                         </div>
                         <div>
-                            <h2>Sprint 2 : Lorem ipsum dolor sit.</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
+                            <div class="row-center">
+                                <h2 class="sprint-element-number"></h2><h2> : Lorem ipsum lorem ipsum</h2>
+                            </div>
+                            <p id="calculDate"></p>
                         </div>
                     </div>
                     <div>
@@ -966,11 +982,14 @@
                         </div>
                         <div>
                             <label for="duree" class="modal-form-label">Durée<span>*</span></label>
-                            <input id="duree" class="input-form" type="number" name="duree">
+                            <div class="row-center">
+                                <input id="duree" class="input-form" type="number" name="duree" placeholder="-" min="1">
+                                <p class="date-select">semaines</p>
+                            </div>
                         </div>
                         <div>
                             <label for="velocite" class="modal-form-label">Velocité maximale envisagée</label>
-                            <input id="velocite" class="input-form" type="number" name="velocite">
+                            <input id="velocite" class="input-form" type="number" min="1" name="velocite">
                         </div>
                     </div>
                 </div>
@@ -1007,14 +1026,14 @@
                                         <p>Problème de financement</p>
                                     </td>
                                     <td>
-                                        <select name="" id="">
+                                        <select>
                                             <option value="rare">Rare</option>
                                             <option value="certain">Certain</option>
                                             <option value="incertain">Incertain</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="" id="">
+                                        <select>
                                             <option value="tres-forte">Très grave</option>
                                             <option value="forte">Grave</option>
                                             <option value="moyenne">Moyenne</option>
@@ -1022,7 +1041,7 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="" id="">
+                                        <select>
                                             <option value="">En légère hausse</option>
                                             <option value="">En baisse</option>
                                         </select>
@@ -1036,14 +1055,26 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="5">
-                                        <select name="" id="" aria-placeholder="Choisir un risque">
+                                    <td>
+                                        <select>
                                             <option value="" disabled selected hidden>Choisir un risque</option>
                                             <option value="tres-eleve">Très élevé</option>
                                             <option value="eleve">Elevé</option>
                                             <option value="Bas">Bas</option>
                                             <option value="aucun">Aucun risque</option>
                                         </select>
+                                    </td>
+                                    <td colspan="4" id="containt-btn-risque">
+                                        <button type="button" class="btn-risque">
+                                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.31359 4.37067L9.55623 0.128026L10.499 1.07084L6.2564 5.31348L10.499 9.55612L9.55623 10.4989L5.31359 6.25629L1.07095 10.4989L0.128139 9.55612L4.37078 5.31348L0.128139 1.07084L1.07095 0.128027L5.31359 4.37067Z" fill="#3D0075" fill-opacity="0.5"/>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn-risque">
+                                            <svg width="15" height="11" viewBox="0 0 15 11" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.08917 7.91073L12.8333 0.166656L14.0118 1.34517L5.08917 10.2678L0.333252 5.51183L1.51176 4.33332L5.08917 7.91073Z" fill="#0FBDE6"/>
+                                            </svg>
+                                        </button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1073,7 +1104,7 @@
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/utilities.js"></script>
-    <script src="js/showRequest.js"></script>
+    <script src="js/maestro-rec.js"></script>
     <script src="js/event.js"></script>
     <script src="js/main.js"></script>
 </body>

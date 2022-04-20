@@ -1,15 +1,10 @@
 /* ***************************************************************************************
 	STYLES GÉNÉRAUX
 ******************************************************************************************* */
-@font-face {
-    font-family: "poppins";
-    src: url(/fonts/poppins/Poppins-Medium.ttf) format("ttf");
-    font-weight: normal;
-    font-style: normal;
-}
 
 *{
     box-sizing: border-box;
+    white-space: normal;
 }
 
 html {
@@ -17,7 +12,7 @@ html {
 }
 
 body{
-    font-family: "poppins";
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     line-height: 1.5rem;
     margin: 0;
@@ -58,10 +53,10 @@ input, textarea{
 }
 
 textarea{
-    height: 48px;
+    height: 46px;
 }
 
-main .search-box{
+div.container .search-box{
     background-color: rgba(99, 2, 188, 0.10);
 }
 
@@ -73,8 +68,20 @@ main .search-box{
     border-radius: 20px;
 }
 
-.search-btn{
+.search-box:hover{
+    border: 1px solid #6303BC;
+}
+
+.search-btn, .close-search-btn{
     margin: 4px 9px 0 9px;
+}
+
+.close-search-btn{
+    display: none;
+}
+
+.search-txt{
+    transition: 0.1s;
 }
 
 ul{
@@ -102,6 +109,10 @@ span{
     color: #BFA9D3;
 }
 
+span.color.dark{
+    color: #000000;
+}
+
 strong{
     color: #3D0075;
 }
@@ -115,11 +126,11 @@ mark{
     text-align: center;
 }
 
-main{
+div.container{
     display: flex;
 }
 
-main section{
+div.container section{
     padding: 1%;
     box-shadow : 0rem 0.5rem 1.5rem 0.5rem rgba(0,0,0,0.10);
     border-radius: 10px;
@@ -135,12 +146,20 @@ main section{
     flex-direction: column;
 }
 
-button{
+.btn-modal-container button{
     border: 1px solid #6303BC;
     background-color: white;
     padding: 10px 22px;
     border-radius: 20px;
     color: #6303BC;
+    cursor: pointer;
+}
+
+#containt-btn-risque button{
+    border: 1px solid #e5e5e5;
+    background-color: rgba(99, 3, 188, 0.05);
+    padding: 1.2%;
+    width: 30px;
     cursor: pointer;
 }
 
@@ -150,4 +169,20 @@ button{
 
 .draggable.dragging{
     opacity: .4;
+}
+
+.trie-btn{
+    padding: 2%;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.product-backlog-container .trie-btn{
+    padding: 6%;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.trie-btn:hover{
+    background-color: rgba(99, 3, 188, 0.1);
 }
